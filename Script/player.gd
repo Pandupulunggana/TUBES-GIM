@@ -1,6 +1,6 @@
 extends CharacterBody3D
 
-
+const MAX_HEALTH = 100
 const WALK_SPEED = 5.0
 const SPRINT_SPEED = 8.0
 const JUMP_VELOCITY = 4.8
@@ -21,10 +21,17 @@ var camera_base_pos: Vector3
 # Item yang sudah diambil (disimpan ke save file)
 var collected_items: Array = []
 
+var health: int = MAX_HEALTH
+
+signal health_changed(new_health)
+
 @onready var head: Node3D = $Head
 @onready var camera: Camera3D = $Head/Camera3D
 @onready var ray: RayCast3D = $Head/Camera3D/RayCast3D
-@onready var interact_label = get_node_or_null("UI/InteractLabel")
+@onready var interact_label = get_node_or_null("HUD/InteractLabel")
+@onready var health_bar: ProgressBar = get_node_or_null("HUD/HealthBar")
+@onready var health_label: Label = get_node_or_null("HUD/HealthBar/HealthLabel")
+@onready var damage_flash: ColorRect = get_node_or_null("HUD/DamageFlash")
 
 
 func _ready() -> void:
@@ -33,7 +40,8 @@ func _ready() -> void:
 	camera_base_pos = camera.transform.origin
 	ray.add_exception(self)
 	ray.target_position = Vector3(0, 0, -3)
-
+	health_changed.connect(_update_health_ui)
+	_update_health_ui(health)
 
 func _unhandled_input(event: InputEvent) -> void:
 	if event is InputEventMouseMotion:
@@ -129,6 +137,32 @@ func collect_item(item_id: String) -> void:
 		collected_items.append(item_id)
 	print("Item diambil: ", item_id, " | Total: ", collected_items.size())
 
+func take_damage(amount: int) -> void:
+	health = max(health - amount, 0)
+	health_changed.emit(health)
+	_flash_damage()
+	print("Player HP: ", health)
+	if health <= 0:
+		die()
+
+func _update_health_ui(value: int) -> void:
+	if health_bar != null:
+		health_bar.max_value = MAX_HEALTH
+		health_bar.value = value
+	if health_label != null:
+		health_label.text = "%d / %d" % [value, MAX_HEALTH]
+
+
+func _flash_damage() -> void:
+	if damage_flash == null:
+		return
+	damage_flash.color.a = 0.35
+	var tween := create_tween()
+	tween.tween_property(damage_flash, "color:a", 0.0, 0.3)
+
+func die() -> void:
+	print("Player died")
+	get_tree().reload_current_scene()
 
 # ===== Save / Load =====
 
@@ -137,6 +171,7 @@ func get_save_data() -> Dictionary:
 		"position": [global_position.x, global_position.y, global_position.z],
 		"head_rot_y": head.rotation.y,
 		"camera_rot_x": camera.rotation.x,
+		"health": health,
 		"collected_items": collected_items
 	}
 
@@ -151,3 +186,6 @@ func load_save_data(data: Dictionary) -> void:
 	collected_items = data.get("collected_items", [])
 	for pickup in get_tree().get_nodes_in_group("pickup"):
 		pickup.set_collected(collected_items.has(pickup.item_id))
+	
+	health = data.get("health", MAX_HEALTH)
+	health_changed.emit(health)

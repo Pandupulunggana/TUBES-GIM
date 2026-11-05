@@ -2,7 +2,9 @@
 
 [ext_resource type="Script" uid="uid://dbo5nd4b8ik2c" path="res://Script/save_manager.gd" id="1_dlwip"]
 [ext_resource type="Script" uid="uid://dxi6wtyxskgce" path="res://Script/player.gd" id="2_ejll3"]
+[ext_resource type="PackedScene" uid="uid://cf10xl58emdou" path="res://Scene/hud.tscn" id="3_37axr"]
 [ext_resource type="PackedScene" uid="uid://nemq8soqimyw" path="res://Scene/coin.tscn" id="3_ejll3"]
+[ext_resource type="PackedScene" uid="uid://fhb375mkpfbj" path="res://Scene/enemy.tscn" id="3_pcvp0"]
 [ext_resource type="PackedScene" uid="uid://daibl4j323t3t" path="res://Scene/main_menu.tscn" id="4_scul4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_emx41"]
@@ -74,6 +76,11 @@ fov = 85.93586
 [node name="RayCast3D" type="RayCast3D" parent="Player/Head/Camera3D" unique_id=1392281510]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26837465, -1.5966477, 0.205894)
 target_position = Vector3(0, 0, -3)
+
+[node name="HUD" parent="Player" unique_id=2135374091 instance=ExtResource("3_37axr")]
+
+[node name="Enemy" parent="." unique_id=1282874479 instance=ExtResource("3_pcvp0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6534369, 11.705351)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1207239414]
 

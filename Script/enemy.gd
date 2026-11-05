@@ -8,9 +8,14 @@ extends CharacterBody3D
 @export var jump_velocity = 6.4
 @export var jump_trigger = 0.5 
 
+@export var attack_range = 1.8
+@export var attack_damage = 10
+@export var attack_cooldown = 1.0
+
 @onready var mesh = $MeshInstance3D
 @onready var nav_agent = $NavigationAgent3D
 
+var attack_timer = 0.0
 var player = null
 var isChasingPlayer = false
 var hop_time = 0.0
@@ -55,6 +60,8 @@ func _physics_process(delta):
 		return
 
 	var distance = global_position.distance_to(player.global_position)
+	
+	attack_timer = max(attack_timer - delta, 0.0)
 
 	if distance <= detect_range and not isChasingPlayer:
 		isChasingPlayer = true
@@ -76,6 +83,11 @@ func _physics_process(delta):
 		
 		if height_diff > jump_trigger and is_on_floor(): 
 			velocity.y = jump_velocity 
+		
+		if distance <= attack_range and attack_timer <= 0.0:
+			if player.has_method("take_damage"):
+				player.take_damage(attack_damage)
+				attack_timer = attack_cooldown
 		
 		hop_time += delta * hop_speed
 		mesh.position.y = 1.0 + abs(sin(hop_time)) * hop_height

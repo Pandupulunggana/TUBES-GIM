@@ -1,0 +1,48 @@
+[gd_scene format=3 uid="uid://cf10xl58emdou"]
+
+[node name="HUD" type="CanvasLayer" unique_id=2135374091]
+
+[node name="InteractLabel" type="Label" parent="." unique_id=1682225921]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = -23.0
+offset_right = 20.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="HealthBar" type="ProgressBar" parent="." unique_id=973224109]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -27.0
+offset_right = 250.0
+offset_bottom = 1.0
+grow_vertical = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(20, -20)
+value = 100.0
+show_percentage = false
+
+[node name="HealthLabel" type="Label" parent="HealthBar" unique_id=631863600]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "100/100"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DamageFlash" type="ColorRect" parent="." unique_id=412130979]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+color = Color(1, 0, 0, 0)
