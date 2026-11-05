@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://s8o7ggoiavci"]
+
+[ext_resource type="PackedScene" uid="uid://fhb375mkpfbj" path="res://Scene/enemy.tscn" id="1_7gvc1"]
+[ext_resource type="PackedScene" uid="uid://btfmub8m26582" path="res://Scene/world.tscn" id="2_n002x"]
+
+[node name="enemyTest" type="Node3D" unique_id=1039760218]
+
+[node name="Enemy" parent="." unique_id=1282874479 instance=ExtResource("1_7gvc1")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 37.45428, -4.2741284, 34.70595)
+hop_height = 2.0
+
+[node name="world" parent="." unique_id=833554078 instance=ExtResource("2_n002x")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 22.930088, -5.7870274, 8.057326)
