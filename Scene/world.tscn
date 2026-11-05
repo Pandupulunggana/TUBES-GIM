@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://dbo5nd4b8ik2c" path="res://Script/save_manager.gd" id="1_dlwip"]
 [ext_resource type="Script" uid="uid://dxi6wtyxskgce" path="res://Script/player.gd" id="2_ejll3"]
 [ext_resource type="PackedScene" uid="uid://nemq8soqimyw" path="res://Scene/coin.tscn" id="3_ejll3"]
+[ext_resource type="PackedScene" uid="uid://daibl4j323t3t" path="res://Scene/main_menu.tscn" id="4_scul4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_emx41"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -53,6 +54,7 @@ size = Vector3(1, 27.754547, 90.151)
 
 [node name="Player" type="CharacterBody3D" parent="." unique_id=1870426658]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 5.17618, 0)
+collision_layer = 2
 script = ExtResource("2_ejll3")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="Player" unique_id=1475436554]
@@ -118,3 +120,7 @@ material = SubResource("StandardMaterial3D_ow5if")
 
 [node name="Coin" parent="." unique_id=1909700176 instance=ExtResource("3_ejll3")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4978244, 9.982563)
+
+[node name="Menu" type="CanvasLayer" parent="." unique_id=439642739]
+
+[node name="MainMenu" parent="Menu" unique_id=1630428235 instance=ExtResource("4_scul4")]
