@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://nemq8soqimyw"]
 
 [ext_resource type="Script" uid="uid://dkskrh1g73xrp" path="res://Script/coin.gd" id="1_wqyjo"]
+[ext_resource type="AudioStream" uid="uid://bios4e1wdi01n" path="res://mario-coin-sound-effect.mp3" id="2_5e757"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_xpn62"]
 top_radius = 0.3
@@ -30,3 +31,6 @@ surface_material_override/0 = SubResource("StandardMaterial3D_5e757")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=214545572]
 shape = SubResource("SphereShape3D_1g4lx")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="." unique_id=848932576]
+stream = ExtResource("2_5e757")
