@@ -95,6 +95,7 @@ func _physics_process(delta: float) -> void:
 
 	# Raycast interaction
 	_check_interaction()
+	attacking()
 
 
 func _headbob(time: float) -> Vector3:
@@ -151,3 +152,19 @@ func load_save_data(data: Dictionary) -> void:
 	collected_items = data.get("collected_items", [])
 	for pickup in get_tree().get_nodes_in_group("pickup"):
 		pickup.set_collected(collected_items.has(pickup.item_id))
+
+#  ===== Attacking =====
+var attack_cooldown = false
+
+@onready var animationPlayer = $AnimationPlayer
+@onready var cooldownAttack = $Attack_Cooldown
+
+func attacking():
+	if Input.is_action_just_pressed("attack") and attack_cooldown == false:
+		animationPlayer.play("Sword Swing")
+		$Head/Camera3D/Weapon.attack()
+		attack_cooldown = true
+		cooldownAttack.start()
+
+func _on_attack_cooldown_timeout() -> void:
+	attack_cooldown = false
