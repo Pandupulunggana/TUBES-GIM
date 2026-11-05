@@ -5,9 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://cf10xl58emdou" path="res://Scene/hud.tscn" id="3_37axr"]
 [ext_resource type="PackedScene" uid="uid://nemq8soqimyw" path="res://Scene/coin.tscn" id="3_ejll3"]
 [ext_resource type="PackedScene" uid="uid://fhb375mkpfbj" path="res://Scene/enemy.tscn" id="3_pcvp0"]
+[ext_resource type="PackedScene" uid="uid://dbbh2o3fbrcl8" path="res://Sword.fbx" id="3_scul4"]
 [ext_resource type="PackedScene" uid="uid://daibl4j323t3t" path="res://Scene/main_menu.tscn" id="4_scul4"]
 [ext_resource type="Script" uid="uid://bfqt3wntnmhw7" path="res://Scene/weapon.gd" id="20_weapon"]
-[ext_resource type="PackedScene" uid="uid://dbbh2o3fbrcl8" path="res://Sword.fbx" id="3_scul4"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_emx41"]
 sky_horizon_color = Color(0.66224277, 0.6717428, 0.6867428, 1)
@@ -147,13 +147,9 @@ fov = 85.93586
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.26837465, -1.5966477, 0.205894)
 target_position = Vector3(0, 0, -3)
 
-[node name="HUD" parent="Player" unique_id=2135374091 instance=ExtResource("3_37axr")]
-
-[node name="Enemy" parent="." unique_id=1282874479 instance=ExtResource("3_pcvp0")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6534369, 11.705351)
 [node name="Weapon" type="Node3D" parent="Player/Head/Camera3D" unique_id=1611950415]
 transform = Transform3D(1.22, 0, 0, 0, 0.8204047, 0.18037768, 0, -0.18037768, 0.8204047, 0.883711, -0.070628166, -1.1660362)
-script = ExtResource("3_pcvp0")
+script = ExtResource("20_weapon")
 
 [node name="Model" type="Node3D" parent="Player/Head/Camera3D/Weapon" unique_id=509785247]
 transform = Transform3D(1, 0, 1.4901161e-08, 0, 1.0000001, 0, -1.4901161e-08, 0, 1, 0, -0.5496454, 0)
@@ -168,9 +164,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -2.373798, 0)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.4397159, 0)
 shape = SubResource("ConvexPolygonShape3D_ejll3")
 
+[node name="HUD" parent="Player" unique_id=2135374091 instance=ExtResource("3_37axr")]
+
 [node name="Attack_Cooldown" type="Timer" parent="Player" unique_id=1598146057]
 wait_time = 1.25
 one_shot = true
+
+[node name="Enemy" parent="." unique_id=1282874479 instance=ExtResource("3_pcvp0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6534369, 11.705351)
 
 [node name="UI" type="CanvasLayer" parent="." unique_id=1207239414]
 
