@@ -102,7 +102,7 @@ use_collision = true
 size = Vector3(1, 27.595337, 89.66165)
 
 [node name="Wall" type="CSGBox3D" parent="." unique_id=2025642489]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.110168, 13.242889, 72.15941)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -25.437347, 14.61788, 72.087654)
 use_collision = true
 size = Vector3(85.73865, 27.485779, 1)
 
@@ -113,13 +113,160 @@ size = Vector3(5.236206, 1.2202148, 5.104492)
 material = SubResource("StandardMaterial3D_xpn62")
 
 [node name="CSGBox3D2" type="CSGBox3D" parent="." unique_id=587229846]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.669029, 2.9384503, 19.708208)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.78, 2.64, 19.857)
+use_collision = true
+size = Vector3(5.861328, 0.7607422, 4.1327515)
+material = SubResource("StandardMaterial3D_ow5if")
+
+[node name="CSGBox3D3" type="CSGBox3D" parent="." unique_id=354176807]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.78, 3.4399245, 25.692)
+use_collision = true
+size = Vector3(5.861328, 0.7607422, 4.1327515)
+material = SubResource("StandardMaterial3D_ow5if")
+
+[node name="CSGBox3D4" type="CSGBox3D" parent="." unique_id=1742118441]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.78, 4.425273, 30.844667)
+use_collision = true
+size = Vector3(5.861328, 0.7607422, 4.1327515)
+material = SubResource("StandardMaterial3D_ow5if")
+
+[node name="CSGBox3D5" type="CSGBox3D" parent="." unique_id=574754764]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.440445, 4.425273, 30.844667)
+use_collision = true
+size = Vector3(5.861328, 0.7607422, 4.1327515)
+material = SubResource("StandardMaterial3D_ow5if")
+
+[node name="CSGBox3D6" type="CSGBox3D" parent="." unique_id=541894804]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.14516544, 4.425273, 30.844667)
+use_collision = true
+size = Vector3(5.861328, 0.7607422, 4.1327515)
+material = SubResource("StandardMaterial3D_ow5if")
+
+[node name="CSGBox3D7" type="CSGBox3D" parent="." unique_id=1011807969]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.096313, 4.425273, 30.844667)
+use_collision = true
+size = Vector3(5.861328, 0.7607422, 4.1327515)
+material = SubResource("StandardMaterial3D_ow5if")
+
+[node name="CSGBox3D8" type="CSGBox3D" parent="." unique_id=1938403435]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.75004, 4.425273, 30.844667)
+use_collision = true
+size = Vector3(5.861328, 0.7607422, 4.1327515)
+material = SubResource("StandardMaterial3D_ow5if")
+
+[node name="CSGBox3D9" type="CSGBox3D" parent="." unique_id=1546391440]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.75004, 4.425273, 36.34443)
+use_collision = true
+size = Vector3(5.861328, 0.7607422, 4.1327515)
+material = SubResource("StandardMaterial3D_ow5if")
+
+[node name="CSGBox3D10" type="CSGBox3D" parent="." unique_id=190967333]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.75004, 4.425273, 42.677364)
+use_collision = true
+size = Vector3(5.861328, 0.7607422, 4.1327515)
+material = SubResource("StandardMaterial3D_ow5if")
+
+[node name="CSGBox3D11" type="CSGBox3D" parent="." unique_id=565745560]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.75004, 4.425273, 48.670616)
+use_collision = true
+size = Vector3(5.861328, 0.7607422, 4.1327515)
+material = SubResource("StandardMaterial3D_ow5if")
+
+[node name="CSGBox3D12" type="CSGBox3D" parent="." unique_id=1834511095]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.75004, 4.425273, 54.74368)
+use_collision = true
+size = Vector3(5.861328, 0.7607422, 4.1327515)
+material = SubResource("StandardMaterial3D_ow5if")
+
+[node name="CSGBox3D13" type="CSGBox3D" parent="." unique_id=878195235]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.75004, 4.425273, 60.84273)
+use_collision = true
+size = Vector3(5.861328, 0.7607422, 4.1327515)
+material = SubResource("StandardMaterial3D_ow5if")
+
+[node name="CSGBox3D14" type="CSGBox3D" parent="." unique_id=1942454040]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.75004, 4.425273, 65.91016)
+use_collision = true
+size = Vector3(5.861328, 0.7607422, 4.1327515)
+material = SubResource("StandardMaterial3D_ow5if")
+
+[node name="CSGBox3D15" type="CSGBox3D" parent="." unique_id=661744691]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.406951, 3.5807667, 71.56929)
+use_collision = true
+size = Vector3(5.861328, 0.7607422, 4.1327515)
+material = SubResource("StandardMaterial3D_ow5if")
+
+[node name="CSGBox3D16" type="CSGBox3D" parent="." unique_id=1491047742]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.025467, 2.9869285, 71.4478)
+use_collision = true
+size = Vector3(5.861328, 0.7607422, 4.1327515)
+material = SubResource("StandardMaterial3D_ow5if")
+
+[node name="CSGBox3D17" type="CSGBox3D" parent="." unique_id=1723766821]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.097252, 2.026577, 71.4478)
+use_collision = true
+size = Vector3(5.861328, 0.7607422, 4.1327515)
+material = SubResource("StandardMaterial3D_ow5if")
+
+[node name="CSGBox3D18" type="CSGBox3D" parent="." unique_id=975614138]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -35.037685, 1.3182459, 71.4478)
 use_collision = true
 size = Vector3(5.861328, 0.7607422, 4.1327515)
 material = SubResource("StandardMaterial3D_ow5if")
 
 [node name="Coin" parent="." unique_id=1909700176 instance=ExtResource("3_ejll3")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.4978244, 9.982563)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.781, 3, 13.680949)
+
+[node name="Coin2" parent="." unique_id=867271310 instance=ExtResource("3_ejll3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.781, 3.8975835, 19.617592)
+
+[node name="Coin3" parent="." unique_id=1146081507 instance=ExtResource("3_ejll3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.781, 4.596323, 25.879778)
+
+[node name="Coin4" parent="." unique_id=1569060638 instance=ExtResource("3_ejll3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.781, 5.8356075, 30.948732)
+
+[node name="Coin5" parent="." unique_id=1536309114 instance=ExtResource("3_ejll3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.45858, 5.8356075, 30.948732)
+
+[node name="Coin6" parent="." unique_id=1808236263 instance=ExtResource("3_ejll3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.13334846, 5.8356075, 30.948732)
+
+[node name="Coin7" parent="." unique_id=131030827 instance=ExtResource("3_ejll3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.0827394, 5.8356075, 30.948732)
+
+[node name="Coin8" parent="." unique_id=483339794 instance=ExtResource("3_ejll3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.734144, 5.8356075, 30.948732)
+
+[node name="Coin9" parent="." unique_id=50018088 instance=ExtResource("3_ejll3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.734144, 5.8356075, 36.16335)
+
+[node name="Coin10" parent="." unique_id=1299742754 instance=ExtResource("3_ejll3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.734144, 5.8356075, 42.674232)
+
+[node name="Coin11" parent="." unique_id=494021510 instance=ExtResource("3_ejll3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.734144, 5.8356075, 48.760906)
+
+[node name="Coin12" parent="." unique_id=235811829 instance=ExtResource("3_ejll3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.734144, 5.8356075, 54.745308)
+
+[node name="Coin13" parent="." unique_id=982365914 instance=ExtResource("3_ejll3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.734144, 5.8356075, 60.814613)
+
+[node name="Coin14" parent="." unique_id=117756 instance=ExtResource("3_ejll3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.734144, 5.8356075, 65.98286)
+
+[node name="Coin15" parent="." unique_id=1184154052 instance=ExtResource("3_ejll3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -14.734144, 4.913868, 70.63383)
+
+[node name="Coin16" parent="." unique_id=1151943187 instance=ExtResource("3_ejll3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -21.489384, 4.2663555, 70.63383)
+
+[node name="Coin17" parent="." unique_id=1341469748 instance=ExtResource("3_ejll3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -28.038256, 3.343484, 70.63383)
+
+[node name="Coin18" parent="." unique_id=2062559802 instance=ExtResource("3_ejll3")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -34.98493, 2.778696, 70.63383)
 
 [node name="Menu" type="CanvasLayer" parent="." unique_id=439642739]
 
